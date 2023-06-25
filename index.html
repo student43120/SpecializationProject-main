@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .chart {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            overflow-x: auto;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .task {
+            position: relative;
+            margin-right: 10px;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 4px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .task::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #4caf50;
+        }
+
+        .task-details {
+            padding: 10px;
+        }
+
+        .task-title {
+            font-weight: bold;
+        }
+
+        .task-date {
+            font-size: 0.8em;
+        }
+
+        .task-duration {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart">
+        <div class="row">
+            <div class="task" style="width: 120px;">
+                <div class="task-details">
+                    <div class="task-title">Project Start</div>
+                    <div class="task-date">May 1</div>
+                    <div class="task-duration">2 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 150px;">
+                <div class="task-details">
+                    <div class="task-title">Backend Development Phase</div>
+                    <div class="task-date">May 3</div>
+                    <div class="task-duration">4 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 180px;">
+                <div class="task-details">
+                    <div class="task-title">Requirements Gathering</div>
+                    <div class="task-date">May 7</div>
+                    <div class="task-duration">5 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 120px;">
+                <div class="task-details">
+                    <div class="task-title">Database Design</div>
+                    <div class="task-date">May 12</div>
+                    <div class="task-duration">3 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 120px;">
+                <div class="task-details">
+                    <div class="task-title">API Design</div>
+                    <div class="task-date">May 15</div>
+                    <div class="task-duration">3 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 320px;">
+                <div class="task-details">
+                    <div class="task-title">Backend Development</div>
+                    <div class="task-date">May 18</div>
+                    <div class="task-duration">12 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 180px;">
+                <div class="task-details">
+                    <div class="task-title">Unit Testing</div>
+                    <div class="task-date">June 1</div>
+                    <div class="task-duration">3 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 240px;">
+                <div class="task-details">
+                    <div class="task-title">Integration Testing</div>
+                    <div class="task-date">June 4</div>
+                    <div class="task-duration">5 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 120px;">
+                <div class="task-details">
+                    <div class="task-title">Backend Deployment</div>
+                    <div class="task-date">June 9</div>
+                    <div class="task-duration">1 day</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="task" style="width: 150px;">
+                <div class="task-details">
+                    <div class="task-title">Frontend Development Phase</div>
+                    <div class="task-date">June 10</div>
+                    <div class="task-duration">1 day</div>
+                </div>
+            </div>
+            <div class="task" style="width: 180px;">
+                <div class="task-details">
+                    <div class="task-title">Requirements Gathering</div>
+                    <div class="task-date">June 10</div>
+                    <div class="task-duration">3 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 120px;">
+                <div class="task-details">
+                    <div class="task-title">UI/UX Design</div>
+                    <div class="task-date">June 14</div>
+                    <div class="task-duration">5 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 120px;">
+                <div class="task-details">
+                    <div class="task-title">Frontend Development</div>
+                    <div class="task-date">June 19</div>
+                    <div class="task-duration">1 day</div>
+                </div>
+            </div>
+            <div class="task" style="width: 180px;">
+                <div class="task-details">
+                    <div class="task-title">Unit Testing</div>
+                    <div class="task-date">June 20</div>
+                    <div class="task-duration">5 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 180px;">
+                <div class="task-details">
+                    <div class="task-title">Integration Testing</div>
+                    <div class="task-date">June 26</div>
+                    <div class="task-duration">4 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 160px;">
+                <div class="task-details">
+                    <div class="task-title">Frontend Deployment</div>
+                    <div class="task-date">June 30</div>
+                    <div class="task-duration">2 days</div>
+                </div>
+            </div>
+            <div class="task" style="width: 120px;">
+                <div class="task-details">
+                    <div class="task-title">Project Completion</div>
+                    <div class="task-date">July 2</div>
+                    <div class="task-duration">1 day</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
