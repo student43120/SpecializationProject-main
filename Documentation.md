@@ -61,18 +61,18 @@ Java application with a Spring backend and an Angular frontend.
 --------------------------------------
 |              Staff                 |
 --------------------------------------
-| - id: int                         |
+| - id: int                          |
 | - name: String                     |
 | - surname: String                  |
 | - email: String                    |
 | - phone: String                    |
 --------------------------------------
-| + getId(): int                    |
+| + getId(): int                     |
 | + getName(): String                |
 | + getSurname(): String             |
 | + getEmail(): String               |
 | + getPhone(): String               |
-| + setId(id: int)                  |
+| + setId(id: int)                   |
 | + setName(name: String)            |
 | + setSurname(surname: String)      |
 | + setEmail(email: String)          |
@@ -83,7 +83,7 @@ Java application with a Spring backend and an Angular frontend.
 --------------------------------------------
 |              Offer                       |
 --------------------------------------------
-| - id: int                               |
+| - id: int                                |
 | - offerName: String                      |
 | - offerType: OfferType                   |
 | - rentStart: LocalDate                   |
@@ -91,14 +91,14 @@ Java application with a Spring backend and an Angular frontend.
 | - price: Double                          |
 | - availability: Boolean                  |
 --------------------------------------------
-| + getId(): int                          |
+| + getId(): int                           |
 | + getOfferName(): String                 |
 | + getOfferType(): OfferType              |
 | + getRentStart(): LocalDate              |
 | + getRentEnd(): LocalDate                |
 | + getPrice(): Double                     |
 | + getAvailability(): Boolean             |
-| + setId(id: int)                        |
+| + setId(id: int)                         |
 | + setOfferName(offerName: String)        |
 | + setOfferType(offerType: OfferType)     |
 | + setRentStart(rentStart: LocalDate)     |
