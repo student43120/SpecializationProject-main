@@ -35,7 +35,7 @@ Java application with a Spring backend and an Angular frontend.
 --------------------------------------
 |            Customer                |
 --------------------------------------
-| - id: Long                         |
+| - id: int                         |
 | - name: String                     |
 | - surname: String                  |
 | - email: String                    |
@@ -43,14 +43,14 @@ Java application with a Spring backend and an Angular frontend.
 | - birthday: LocalDate              |
 | - age: Integer                     |
 --------------------------------------
-| + getId(): Long                    |
+| + getId(): int                    |
 | + getName(): String                |
 | + getSurname(): String             |
 | + getEmail(): String               |
 | + getPhone(): String               |
 | + getBirthday(): LocalDate         |
 | + getAge(): Integer                |
-| + setId(id: Long)                  |
+| + setId(id: int)                  |
 | + setName(name: String)            |
 | + setSurname(surname: String)      |
 | + setEmail(email: String)          |
@@ -61,18 +61,18 @@ Java application with a Spring backend and an Angular frontend.
 --------------------------------------
 |              Staff                 |
 --------------------------------------
-| - id: Long                         |
+| - id: int                         |
 | - name: String                     |
 | - surname: String                  |
 | - email: String                    |
 | - phone: String                    |
 --------------------------------------
-| + getId(): Long                    |
+| + getId(): int                    |
 | + getName(): String                |
 | + getSurname(): String             |
 | + getEmail(): String               |
 | + getPhone(): String               |
-| + setId(id: Long)                  |
+| + setId(id: int)                  |
 | + setName(name: String)            |
 | + setSurname(surname: String)      |
 | + setEmail(email: String)          |
@@ -83,7 +83,7 @@ Java application with a Spring backend and an Angular frontend.
 --------------------------------------------
 |              Offer                       |
 --------------------------------------------
-| - id: Long                               |
+| - id: int                               |
 | - offerName: String                      |
 | - offerType: OfferType                   |
 | - rentStart: LocalDate                   |
@@ -91,14 +91,14 @@ Java application with a Spring backend and an Angular frontend.
 | - price: Double                          |
 | - availability: Boolean                  |
 --------------------------------------------
-| + getId(): Long                          |
+| + getId(): int                          |
 | + getOfferName(): String                 |
 | + getOfferType(): OfferType              |
 | + getRentStart(): LocalDate              |
 | + getRentEnd(): LocalDate                |
 | + getPrice(): Double                     |
 | + getAvailability(): Boolean             |
-| + setId(id: Long)                        |
+| + setId(id: int)                        |
 | + setOfferName(offerName: String)        |
 | + setOfferType(offerType: OfferType)     |
 | + setRentStart(rentStart: LocalDate)     |
@@ -108,9 +108,6 @@ Java application with a Spring backend and an Angular frontend.
 --------------------------------------------
 
 ```
-
-
-
 
 
 
