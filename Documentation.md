@@ -35,7 +35,7 @@ Java application with a Spring backend and an Angular frontend.
 --------------------------------------
 |            Customer                |
 --------------------------------------
-| - id: int                          |
+| - id: Long                         |
 | - name: String                     |
 | - surname: String                  |
 | - email: String                    |
@@ -43,7 +43,7 @@ Java application with a Spring backend and an Angular frontend.
 | - birthday: LocalDate              |
 | - age: int                         |
 --------------------------------------
-| + getId(): int                     |
+| + getId(): Long                    |
 | + getName(): String                |
 | + getSurname(): String             |
 | + getEmail(): String               |
