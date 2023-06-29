@@ -31,6 +31,7 @@ Java application with a Spring backend and an Angular frontend.
   ###  - private visibility
   ###  + public visibility
 
+```
 --------------------------------------
 |            Customer                |
 --------------------------------------
@@ -106,7 +107,7 @@ Java application with a Spring backend and an Angular frontend.
 | + setAvailability(availability: Boolean) |
 --------------------------------------------
 
-
+```
 
 
 
