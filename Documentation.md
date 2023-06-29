@@ -35,22 +35,22 @@ Java application with a Spring backend and an Angular frontend.
 --------------------------------------
 |            Customer                |
 --------------------------------------
-| - id: int                         |
+| - id: int                          |
 | - name: String                     |
 | - surname: String                  |
 | - email: String                    |
 | - phone: String                    |
 | - birthday: LocalDate              |
-| - age: Integer                     |
+| - age: int                         |
 --------------------------------------
-| + getId(): int                    |
+| + getId(): int                     |
 | + getName(): String                |
 | + getSurname(): String             |
 | + getEmail(): String               |
 | + getPhone(): String               |
 | + getBirthday(): LocalDate         |
 | + getAge(): Integer                |
-| + setId(id: int)                  |
+| + setId(id: int)                   |
 | + setName(name: String)            |
 | + setSurname(surname: String)      |
 | + setEmail(email: String)          |
