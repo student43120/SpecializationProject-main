@@ -9,4 +9,5 @@ DELETE
 curl -X DELETE http://localhost:8080/api/v1/customer/1
 
 PUT
-curl -X PUT http://localhost:8080/api/v1/customer/1?name=Aga
+curl -X PUT http://localhost:8080/api/v1/customer/1?name=maria
+
