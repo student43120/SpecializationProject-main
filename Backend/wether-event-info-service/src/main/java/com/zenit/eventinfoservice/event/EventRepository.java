@@ -2,8 +2,7 @@ package com.zenit.eventinfoservice.event;
 
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 @Repository
 public class EventRepository {
@@ -15,26 +14,16 @@ public class EventRepository {
     }
 
     Random random = new Random();
-    int randomValueOfMonth;
-    int randomValueOfWeather;
-
-    MonthValue monthValue;
 
     {
-         events = List.of(
-                 new Event(MonthValue.JANUARY,DescriptionValue.BRIGHT),
-                 new Event(MonthValue.FEBRUARY,DescriptionValue.CLEARSKY),
-                 new Event(MonthValue.MARCH,DescriptionValue.CLOUDY),
-                 new Event(MonthValue.APRIL,DescriptionValue.SUNNY),
-                 new Event(MonthValue.MAY,DescriptionValue.WINDY),
-                 new Event(MonthValue.JUNE,DescriptionValue.DIZZY),
-                 new Event(MonthValue.JULY,DescriptionValue.BRIGHT),
-                 new Event(MonthValue.AUGUST,DescriptionValue.HOT),
-                 new Event(MonthValue.SEPTEMBER,DescriptionValue.RAINY),
-                 new Event(MonthValue.OCTOBER,DescriptionValue.STORMY),
-                 new Event(MonthValue.NOVEMBER,DescriptionValue.WINDY),
-                 new Event(MonthValue.DECEMBER,DescriptionValue.SNOWY)
-                 );
+        Set<Event> listOfEvents = new HashSet<>();
+        for (int i = 0; i < 500; i++) {
+            listOfEvents.add(new Event(MonthValue.fromInt(getRandomValueOfMonth()),
+                    DescriptionValue.fromInt(getRandomValueOfWeather()),getRandomValueOfYear()));
+        }
+
+        events = listOfEvents.stream()
+                .sorted((eventF,eventS) -> Integer.compare(eventS.getYear(),eventF.getYear())).toList();
     }
 
     public int getRandomValueOfMonth() {
@@ -44,6 +33,8 @@ public class EventRepository {
     public int getRandomValueOfWeather() {
         return random.nextInt(1,11);
     }
+
+    public int getRandomValueOfYear() {
+        return random.nextInt(1800,2025);
+    }
 }
-
-

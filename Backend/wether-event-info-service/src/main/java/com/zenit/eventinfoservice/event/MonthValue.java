@@ -24,6 +24,15 @@ public enum MonthValue {
 
     }
 
+    public static MonthValue fromInt(int value) {
+        for (MonthValue month : MonthValue.values()) {
+            if (month.monthValue == value) {
+                return month;
+            }
+        }
+        throw new IllegalArgumentException("Invalid value: " + value);
+    }
+  
     public int getMonthValue() {
         return monthValue;
     }

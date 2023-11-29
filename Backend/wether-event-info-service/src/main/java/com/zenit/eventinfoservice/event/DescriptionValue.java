@@ -1,30 +1,39 @@
 package com.zenit.eventinfoservice.event;
 
-public enum DescriptionValue {
-    SUNNY("Sunny", 25, 50, 10, 1),
-    CLEARSKY("Clear Sky", 20, 60, 5, 2),
-    WINDY("Windy", 15, 70, 15, 3),
-    RAINY("Rainy", 18, 80, 20, 4),
-    CLOUDY("Cloudy", 22, 65, 10, 5),
-    HOT("Hot", 32, 85, 10, 6),
-    DIZZY("Dizzy", 24, 55, 5, 7),
-    STORMY("Stormy", 19, 90, 30, 8),
-    SNOWY("Snowy", -5, 30, 8, 9),
-    BRIGHT("Bright", 28,40,5, 10);
+import java.util.List;
+
+public class DescriptionValue {
 
     private String description;
     private int degree;
     private int airHumidity;
     private int windSpeed;
+    private static List<DescriptionValue> descriptionList;
 
-    private int descriptionValue;
+    DescriptionValue(String description, int degree, int airHumidity, int windSpeed) {
+        this.description = description;
+        this.degree = degree;
+        this.airHumidity = airHumidity;
+        this.windSpeed = windSpeed;
+    }
 
-    DescriptionValue(String description, int degree, int airHumidity, int windSpeed, int descriptionValue) {
-    this.description = description;
-    this.degree = degree;
-    this.airHumidity = airHumidity;
-    this.windSpeed = windSpeed;
-    this.descriptionValue = descriptionValue;
+    static {
+        descriptionList = List.of(
+                new DescriptionValue("Sunny", 25, 50, 10),
+                new DescriptionValue("Clear Sky", 20, 60, 5),
+                new DescriptionValue("Windy", 15, 70, 15),
+                new DescriptionValue("Rainy", 18, 80, 20),
+                new DescriptionValue("Cloudy", 22, 65, 10),
+                new DescriptionValue("Hot", 32, 85, 10),
+                new DescriptionValue("Dizzy", 24, 55, 5),
+                new DescriptionValue("Stormy", 19, 90, 30),
+                new DescriptionValue("Snowy", -5, 30, 8),
+                new DescriptionValue("Bright", 28, 40, 5)
+        );
+    }
+
+    public static DescriptionValue fromInt(int value) {
+        return descriptionList.get(value-1);
     }
 
     public String getDescription() {
@@ -59,14 +68,6 @@ public enum DescriptionValue {
         this.windSpeed = windSpeed;
     }
 
-    public int getDescriptionValue() {
-        return descriptionValue;
-    }
-
-    public void setDescriptionValue(int descriptionValue) {
-        this.descriptionValue = descriptionValue;
-    }
-
     @Override
     public String toString() {
         return "DescriptionValue{" +
@@ -74,7 +75,6 @@ public enum DescriptionValue {
                 ", degree=" + degree +
                 ", airHumidity=" + airHumidity +
                 ", windSpeed=" + windSpeed +
-                ", descriptionValue=" + descriptionValue +
                 '}';
     }
 }

@@ -17,11 +17,11 @@ public class GreetingController {
     @Value("${spring.application.name}")
     private String appName;
 
-    @RequestMapping("/actuator/info")
+    @RequestMapping("/greeting")
     public String greeting() {
         return  String.format("Hello from '%s'! " +
-                ": write this url if you want vie a events:" +
-                " http://localhost:8081/event/list",eurekaClient.getApplication(appName).getName());
+                ": this url if you want view a events: " +
+                "<a href=\"http://localhost:8081/event/list\" >LIST OF EVENTS</a>",eurekaClient.getApplication(appName).getName());
     }
 
 }
