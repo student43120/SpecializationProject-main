@@ -35,6 +35,9 @@ public class ProductConfig {
                     false,
                     7L
             );
+            repository.saveAll(
+                    List.of(longWeek,weekChill)
+            );
         };
     }
 }

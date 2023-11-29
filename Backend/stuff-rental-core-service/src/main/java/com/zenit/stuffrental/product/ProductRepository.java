@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface ProductRepository
         extends JpaRepository<Product, Long> {
     //@Query("SELECT c FROM Customer c WHERE c.email = ?1")
-    Optional<Product> findProductById(String productId);
+    Optional<Product> findProductById(Long productId);
 
     Optional<Product> findProductByOfferName(String offerName);
 }
