@@ -43,3 +43,101 @@ az webapp deployment source config-zip --resource-group Specialization Project -
 
 Project manager is inbuilt app, which is based on java script, express.js and MongoDB.
 In code, you can find task without status, because this project was realized by one person.
+
+
+
+
+
+
+
+
+# BACKEND
+```
+
+├── docker-install
+│   ├── script-to-install-docker-ubuntu.sh
+│   └── script-to-install-docker-windows.bat
+├── eureka-server
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── com
+│       │   │       └── zenit
+│       │   │           └── weathereurekaserver
+│       │   │               └── WeatherEurekaServerApplication.java
+│       │   └── resources
+│       │       └── application.yml
+│       └── test
+│           └── java
+│               └── com
+│                   └── zenit
+│                       └── weathereurekaserver
+│                           └── WeatherEurekaServerApplicationTests.java
+├── stuff-rental-core-service
+│   ├── CURL
+│   │   └── curl.txt
+│   ├── mvnw
+│   ├── mvnw.cmd
+│   ├── pom.xml
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── com
+│       │   │       └── zenit
+│       │   │           └── stuffrental
+│       │   │               ├── customer
+│       │   │               │   ├── CustomerConfig.java
+│       │   │               │   ├── CustomerController.java
+│       │   │               │   ├── Customer.java
+│       │   │               │   ├── CustomerRepository.java
+│       │   │               │   ├── CustomerService.java
+│       │   │               │   └── CustomerValidation.java
+│       │   │               ├── product
+│       │   │               │   ├── OfferType.java
+│       │   │               │   ├── ProductConfig.java
+│       │   │               │   ├── ProductController.java
+│       │   │               │   ├── Product.java
+│       │   │               │   ├── ProductRepository.java
+│       │   │               │   ├── ProductService.java
+│       │   │               │   └── ProductValidation.java
+│       │   │               ├── staff
+│       │   │               │   ├── StaffConfig.java
+│       │   │               │   ├── StaffController.java
+│       │   │               │   ├── Staff.java
+│       │   │               │   ├── StaffRepository.java
+│       │   │               │   ├── StaffService.java
+│       │   │               │   └── StaffValidation.java
+│       │   │               └── StuffRentalApplication.java
+│       │   └── resources
+│       │       └── application.properties
+│       └── test
+│           └── java
+│               └── com
+│                   └── zenit
+│                       └── stuffrental
+│                           └── StuffRentalApplicationTests.java
+└── wether-event-info-service
+    ├── mvnw
+    ├── mvnw.cmd
+    ├── pom.xml
+    └── src
+        └── main
+            ├── java
+            │   └── com
+            │       └── zenit
+            │           └── eventinfoservice
+            │               ├── event
+            │               │   ├── DescriptionValue.java
+            │               │   ├── EventController.java
+            │               │   ├── Event.java
+            │               │   ├── EventRepository.java
+            │               │   ├── EventService.java
+            │               │   └── MonthValue.java
+            │               ├── GreetingController.java
+            │               └── WeatherEventInfoServiceApplication.java
+            └── resources
+                └── application.yml
+```
